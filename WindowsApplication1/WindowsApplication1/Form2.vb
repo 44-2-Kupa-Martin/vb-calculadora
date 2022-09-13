@@ -1,5 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class Form2
+    Dim divByZero As Boolean = False
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
         TextBox1.Text = TextBox1.Text + "0"
     End Sub
@@ -123,10 +124,52 @@ Public Class Form2
         For Each Num As Decimal In quotentStack
             finalQuotent = finalQuotent * Num
         Next
+        If finalQuotent = 0 Then
+            divByZero = True
+            Return 0
+        End If
         Return finalProduct / finalQuotent
     End Function
 
     Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
-        TextBox1.Text = CStr(parseSum(TextBox1.Text))
+        If TextBox1.Text = "" Then
+            Return
+        End If
+        If TextBox1.Text.Chars(0) = "E" Then
+            TextBox1.Text = ""
+            Return
+        End If
+        Dim result As Decimal = parseSum(TextBox1.Text)
+        If divByZero Then
+            divByZero = False
+            TextBox1.Text = "Err div. by Zero"
+            Return
+        End If
+        TextBox1.Text = CStr(result)
+    End Sub
+
+    Private Sub Form2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        Select Case e.KeyChar
+            Case "0"
+                Button10.PerformClick()
+            Case "1"
+                Button1.PerformClick()
+            Case "2"
+                Button2.PerformClick()
+            Case "3"
+                Button3.PerformClick()
+            Case "4"
+                Button4.PerformClick()
+            Case "5"
+                Button5.PerformClick()
+            Case "6"
+                Button6.PerformClick()
+            Case "7"
+                Button7.PerformClick()
+            Case "8"
+                Button8.PerformClick()
+            Case "9"
+                Button9.PerformClick()
+        End Select
     End Sub
 End Class
