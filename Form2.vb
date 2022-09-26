@@ -108,11 +108,30 @@ Public Class Form2
         Return finalSum - finalSubtrahend
     End Function
 
+    Private Function parsePowers(ByVal input As String) As Decimal
+        Dim result() As String = Regex.Split(input, "(\^|sqrt)")
+        If result(1).StartsWith("sqrt") Then
+            Return CDec(result(2)) ^ (1 / 2)
+        End If
+        Dim base As Decimal = result(0)
+        'remove first str
+        For i = 1 To UBound(result)
+            result(i - 1) = result(i)
+        Next i
+        ReDim Preserve result(UBound(result) - 1)
+        '
+        For Each Str As String In result
+            If Str = "^" Then Continue For
+            base = base ^ CDec(Str)
+        Next
+        Return base
+    End Function
+
     Private Function parseProduct(ByVal input As String) As Decimal
-        Dim result() As String = Regex.Split(input, "(\*|/)")
-        Dim productStack As New List(Of Decimal)
+        Dim result() As String = Regex.Split(input, "(\*|\/)")
+        Dim productStack As New List(Of String)
         Dim finalProduct As Decimal = 1
-        Dim quotentStack As New List(Of Decimal)
+        Dim quotentStack As New List(Of String)
         Dim finalQuotent As Decimal = 1
         '2 is a product, 1 is a division, 0 is a number
         Dim flag As Integer = 2
@@ -133,11 +152,11 @@ Public Class Form2
         Next
 
 
-        For Each Num As Decimal In productStack
-            finalProduct = finalProduct * Num
+        For Each Str As String In productStack
+            finalProduct = finalProduct * parsePowers(Str)
         Next
-        For Each Num As Decimal In quotentStack
-            finalQuotent = finalQuotent * Num
+        For Each Str As String In quotentStack
+            finalQuotent = finalQuotent * parsePowers(Str)
         Next
         If finalQuotent = 0 Then
             divByZero = True
@@ -194,6 +213,12 @@ Public Class Form2
                 Button15.PerformClick()
             Case "/"
                 Button16.PerformClick()
+            Case "^"
+                Button17.PerformClick()
+            Case "("
+                Button19.PerformClick()
+            Case ")"
+                Button20.PerformClick()
         End Select
     End Sub
 
@@ -214,4 +239,23 @@ Public Class Form2
         Label1.Focus()
     End Sub
 
+    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
+        TextBox1.Text = TextBox1.Text + "^"
+        Label1.Focus()
+    End Sub
+
+    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
+        TextBox1.Text = TextBox1.Text + "sqrt("
+        Label1.Focus()
+    End Sub
+
+    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
+        TextBox1.Text = TextBox1.Text + "("
+        Label1.Focus()
+    End Sub
+
+    Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button20.Click
+        TextBox1.Text = TextBox1.Text + ")"
+        Label1.Focus()
+    End Sub
 End Class

@@ -40,6 +40,10 @@ Partial Class Form2
         Me.Button16 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -204,11 +208,51 @@ Partial Class Form2
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 17
         '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(162, 219)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(33, 30)
+        Me.Button17.TabIndex = 18
+        Me.Button17.Text = "^"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(162, 183)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(33, 33)
+        Me.Button18.TabIndex = 19
+        Me.Button18.Text = "Sqrt"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(162, 147)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(33, 30)
+        Me.Button19.TabIndex = 20
+        Me.Button19.Text = "("
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(162, 111)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(33, 30)
+        Me.Button20.TabIndex = 21
+        Me.Button20.Text = ")"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.Button20)
+        Me.Controls.Add(Me.Button19)
+        Me.Controls.Add(Me.Button18)
+        Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button16)
@@ -252,4 +296,8 @@ Partial Class Form2
     Friend WithEvents Button16 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Button17 As System.Windows.Forms.Button
+    Friend WithEvents Button18 As System.Windows.Forms.Button
+    Friend WithEvents Button19 As System.Windows.Forms.Button
+    Friend WithEvents Button20 As System.Windows.Forms.Button
 End Class
