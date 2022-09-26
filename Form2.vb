@@ -109,10 +109,10 @@ Public Class Form2
     End Function
 
     Private Function parsePowers(ByVal input As String) As Decimal
-        Dim result() As String = Regex.Split(input, "(\^|sqrt)")
-        If result(1).StartsWith("sqrt") Then
-            Return CDec(result(2)) ^ (1 / 2)
+        If input.StartsWith("sqrt") Then
+            Return CDec(input.Replace("sqrt", "")) ^ (1 / 2)
         End If
+        Dim result() As String = Regex.Split(input, "(\^)")
         Dim base As Decimal = result(0)
         'remove first str
         For i = 1 To UBound(result)
