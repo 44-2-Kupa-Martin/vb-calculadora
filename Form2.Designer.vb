@@ -45,6 +45,7 @@ Partial Class Form2
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -139,7 +140,7 @@ Partial Class Form2
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(54, 111)
+        Me.Button11.Location = New System.Drawing.Point(201, 219)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(30, 30)
         Me.Button11.TabIndex = 10
@@ -248,18 +249,28 @@ Partial Class Form2
         '
         'Button21
         '
-        Me.Button21.Location = New System.Drawing.Point(201, 183)
+        Me.Button21.Location = New System.Drawing.Point(54, 111)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(34, 28)
+        Me.Button21.Size = New System.Drawing.Size(30, 30)
         Me.Button21.TabIndex = 22
         Me.Button21.Text = "."
         Me.Button21.UseVisualStyleBackColor = True
+        '
+        'Button22
+        '
+        Me.Button22.Location = New System.Drawing.Point(201, 183)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(30, 30)
+        Me.Button22.TabIndex = 23
+        Me.Button22.Text = "C"
+        Me.Button22.UseVisualStyleBackColor = True
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.Button22)
         Me.Controls.Add(Me.Button21)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Button19)
@@ -313,4 +324,5 @@ Partial Class Form2
     Friend WithEvents Button19 As System.Windows.Forms.Button
     Friend WithEvents Button20 As System.Windows.Forms.Button
     Friend WithEvents Button21 As System.Windows.Forms.Button
+    Friend WithEvents Button22 As Button
 End Class
