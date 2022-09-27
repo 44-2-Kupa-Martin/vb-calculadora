@@ -122,6 +122,7 @@ Public Class Form2
     End Sub
 
     Private Function test(ByVal input As String) As Double
+        'https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions
         Dim myVar As MatchCollection = Regex.Matches(input, "\(([^()]+)\)")
         While myVar.Count <> 0
             For Each match As Match In myVar
@@ -249,6 +250,8 @@ Public Class Form2
             Return
         End If
         Dim result As Double
+
+        'https://learn.microsoft.com/en-us/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement
         Try
             result = test(TextBox1.Text)
         Catch ex As Exception
