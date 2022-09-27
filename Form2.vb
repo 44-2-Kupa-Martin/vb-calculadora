@@ -76,6 +76,22 @@ Public Class Form2
         Label1.Focus()
     End Sub
 
+    Private Function test(ByVal input As String) As Decimal
+        Dim myVar As MatchCollection = Regex.Matches(input, "\(([^()]+)\)")
+        While myVar.Count <> 0
+            For Each match As Match In myVar
+                Dim res As Decimal = parseSum(Regex.Replace(match.ToString(), "\(|\)", ""))
+                If res < 0 Then
+                    input = input.Replace(match.ToString(), "#" + (-1 * res).ToString())
+                Else
+                    input = input.Replace(match.ToString(), res.ToString())
+                End If
+            Next
+            myVar = Regex.Matches(input, "\(([^()]+)\)")
+        End While
+        Return parseSum(input)
+    End Function
+
     Private Function parseSum(ByVal input As String) As Decimal
         Dim result() As String = Regex.Split(input, "(\+|-)")
         Dim sumStack As New List(Of String)
@@ -85,19 +101,23 @@ Public Class Form2
         '2 is a sum, 1 is a substraction, 0 is number
         Dim flag As Integer = 2
         For Each Str As String In result
+            If Str = String.Empty Then
+                Continue For
+            ElseIf Str = "-" Then
+                flag = 1
+                Continue For
+            ElseIf Str = "+" Then
+                flag = 2
+                Continue For
+            End If
             Select Case flag
                 Case 2
                     sumStack.Add(Str)
+                    flag = 0
                 Case 1
                     subtrahendStack.Add(Str)
+                    flag = 0
             End Select
-            If Str = "-" Then
-                flag = 1
-            ElseIf Str = "+" Then
-                flag = 2
-            Else
-                flag = 0
-            End If
         Next
         For Each Str As String In sumStack
             finalSum = finalSum + parseProduct(Str)
@@ -113,16 +133,23 @@ Public Class Form2
             Return CDec(input.Replace("sqrt", "")) ^ (1 / 2)
         End If
         Dim result() As String = Regex.Split(input, "(\^)")
-        Dim base As Decimal = result(0)
-        'remove first str
-        For i = 1 To UBound(result)
-            result(i - 1) = result(i)
-        Next i
-        ReDim Preserve result(UBound(result) - 1)
-        '
-        For Each Str As String In result
-            If Str = "^" Then Continue For
-            base = base ^ CDec(Str)
+        Dim base As Decimal
+        If result(0).StartsWith("#") Then
+            base = result(0).Replace("#", "")
+            base = -1 * base
+        Else
+            base = result(0)
+        End If
+        For i = 1 To result.Length - 1 Step 1
+            If result(i) = "^" Then Continue For
+            Dim num As Decimal
+            If result(i).StartsWith("#") Then
+                num = result(i).Replace("#", "")
+                num = -1 * num
+            Else
+                num = result(i)
+            End If
+            base = base ^ num
         Next
         Return base
     End Function
@@ -173,7 +200,7 @@ Public Class Form2
             TextBox1.Text = ""
             Return
         End If
-        Dim result As Decimal = parseSum(TextBox1.Text)
+        Dim result As Decimal = test(TextBox1.Text)
         If divByZero Then
             divByZero = False
             TextBox1.Text = "Err div. by Zero"
@@ -219,6 +246,8 @@ Public Class Form2
                 Button19.PerformClick()
             Case ")"
                 Button20.PerformClick()
+            Case ","
+                Button21.PerformClick()
         End Select
     End Sub
 
@@ -256,6 +285,11 @@ Public Class Form2
 
     Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button20.Click
         TextBox1.Text = TextBox1.Text + ")"
+        Label1.Focus()
+    End Sub
+
+    Private Sub Button21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button21.Click
+        TextBox1.Text = TextBox1.Text + ","
         Label1.Focus()
     End Sub
 End Class

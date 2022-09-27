@@ -44,6 +44,7 @@ Partial Class Form2
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -192,6 +193,7 @@ Partial Class Form2
         '
         'TextBox1
         '
+        Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(32, 26)
         Me.TextBox1.Name = "TextBox1"
@@ -244,11 +246,21 @@ Partial Class Form2
         Me.Button20.Text = ")"
         Me.Button20.UseVisualStyleBackColor = True
         '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(201, 183)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(34, 28)
+        Me.Button21.TabIndex = 22
+        Me.Button21.Text = "."
+        Me.Button21.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.Button21)
         Me.Controls.Add(Me.Button20)
         Me.Controls.Add(Me.Button19)
         Me.Controls.Add(Me.Button18)
@@ -300,4 +312,5 @@ Partial Class Form2
     Friend WithEvents Button18 As System.Windows.Forms.Button
     Friend WithEvents Button19 As System.Windows.Forms.Button
     Friend WithEvents Button20 As System.Windows.Forms.Button
+    Friend WithEvents Button21 As System.Windows.Forms.Button
 End Class
