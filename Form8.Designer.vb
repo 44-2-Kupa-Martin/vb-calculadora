@@ -182,9 +182,9 @@ Partial Class Form8
         '
         Me.Button3.Location = New System.Drawing.Point(150, 125)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(63, 23)
+        Me.Button3.Size = New System.Drawing.Size(63, 37)
         Me.Button3.TabIndex = 29
-        Me.Button3.Text = "Multiplicar"
+        Me.Button3.Text = "Multiplicar Vectores"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
@@ -201,9 +201,9 @@ Partial Class Form8
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(352, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 13)
+        Me.Label4.Size = New System.Drawing.Size(91, 13)
         Me.Label4.TabIndex = 31
-        Me.Label4.Text = "Escalar"
+        Me.Label4.Text = "Escalar (Vector 1)"
         '
         'esc1
         '
