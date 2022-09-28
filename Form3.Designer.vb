@@ -31,46 +31,56 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 136)
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 10.0!)
+        Me.Button1.ForeColor = System.Drawing.Color.RosyBrown
+        Me.Button1.Location = New System.Drawing.Point(157, 108)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 42)
+        Me.Button1.Size = New System.Drawing.Size(138, 42)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Sumar matrices"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(146, 136)
+        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 10.0!)
+        Me.Button2.ForeColor = System.Drawing.Color.RosyBrown
+        Me.Button2.Location = New System.Drawing.Point(322, 108)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(105, 42)
+        Me.Button2.Size = New System.Drawing.Size(137, 42)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Multiplicar Matrices"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 204)
+        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 10.0!)
+        Me.Button3.ForeColor = System.Drawing.Color.RosyBrown
+        Me.Button3.Location = New System.Drawing.Point(157, 165)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 45)
+        Me.Button3.Size = New System.Drawing.Size(138, 45)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Multiplicar Matriz Por escalar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(146, 204)
+        Me.Button4.Font = New System.Drawing.Font("Times New Roman", 10.0!)
+        Me.Button4.ForeColor = System.Drawing.Color.RosyBrown
+        Me.Button4.Location = New System.Drawing.Point(322, 165)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(105, 45)
+        Me.Button4.Size = New System.Drawing.Size(137, 45)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Diagonalizar Matriz"
+        Me.Button4.Text = "Diagonalizar Matriz (En mantenimiento)"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(78, 62)
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.RosyBrown
+        Me.Label1.Location = New System.Drawing.Point(206, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
+        Me.Label1.Size = New System.Drawing.Size(203, 25)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "¿Que desea Realizar?"
         '
@@ -78,14 +88,17 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.BackColor = System.Drawing.Color.BurlyWood
+        Me.ClientSize = New System.Drawing.Size(641, 261)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Text = "---"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
