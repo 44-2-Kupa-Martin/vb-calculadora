@@ -88,3 +88,7 @@ C:\Users\Feder\Source\Repos\44-2-Kupa-Martin\vb-calculadora\obj\x86\Debug\Window
 C:\Users\Feder\Source\Repos\44-2-Kupa-Martin\vb-calculadora\obj\x86\Debug\WindowsApplication1.xml
 C:\Users\Feder\Source\Repos\44-2-Kupa-Martin\vb-calculadora\obj\x86\Debug\WindowsApplication1.pdb
 C:\Users\Feder\Source\Repos\44-2-Kupa-Martin\vb-calculadora\obj\x86\Debug\WindowsApplication1.Form8.resources
+C:\Users\Casa\Desktop\Development\vb-projects\vb-calculadora\obj\x86\Debug\WindowsApplication1.Form4.resources
+C:\Users\Casa\Desktop\Development\vb-projects\vb-calculadora\obj\x86\Debug\WindowsApplication1.Form5.resources
+C:\Users\Casa\Desktop\Development\vb-projects\vb-calculadora\obj\x86\Debug\WindowsApplication1.Form6.resources
+C:\Users\Casa\Desktop\Development\vb-projects\vb-calculadora\obj\x86\Debug\WindowsApplication1.Form7.resources

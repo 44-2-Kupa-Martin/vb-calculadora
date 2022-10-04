@@ -20,80 +20,106 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ModoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculadoraCientificaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculadoraVectorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculadoraDeMatricesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SumarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MultiplicarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MultiplicarPorEscalarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'MenuStrip1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(74, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Bienvenido"
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModoToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(896, 24)
+        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'Button1
+        'ModoToolStripMenuItem
         '
-        Me.Button1.Location = New System.Drawing.Point(45, 141)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Numeros"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ModoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculadoraCientificaToolStripMenuItem, Me.CalculadoraVectorialToolStripMenuItem, Me.CalculadoraDeMatricesToolStripMenuItem})
+        Me.ModoToolStripMenuItem.Name = "ModoToolStripMenuItem"
+        Me.ModoToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.ModoToolStripMenuItem.Text = "Modo"
         '
-        'Button2
+        'CalculadoraCientificaToolStripMenuItem
         '
-        Me.Button2.Location = New System.Drawing.Point(162, 141)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Matrices"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.CalculadoraCientificaToolStripMenuItem.Name = "CalculadoraCientificaToolStripMenuItem"
+        Me.CalculadoraCientificaToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.CalculadoraCientificaToolStripMenuItem.Text = "Calculadora Cientifica"
         '
-        'Label2
+        'CalculadoraVectorialToolStripMenuItem
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(76, 109)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(129, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "¿Con que desea trabajar?"
+        Me.CalculadoraVectorialToolStripMenuItem.Name = "CalculadoraVectorialToolStripMenuItem"
+        Me.CalculadoraVectorialToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.CalculadoraVectorialToolStripMenuItem.Text = "Calculadora vectorial"
         '
-        'Button4
+        'CalculadoraDeMatricesToolStripMenuItem
         '
-        Me.Button4.Location = New System.Drawing.Point(76, 198)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(129, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Juga con los vectores"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.CalculadoraDeMatricesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SumarToolStripMenuItem, Me.MultiplicarToolStripMenuItem, Me.MultiplicarPorEscalarToolStripMenuItem})
+        Me.CalculadoraDeMatricesToolStripMenuItem.Name = "CalculadoraDeMatricesToolStripMenuItem"
+        Me.CalculadoraDeMatricesToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
+        Me.CalculadoraDeMatricesToolStripMenuItem.Text = "Calculadora de Matrices"
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.AutoSize = True
+        Me.Panel1.Location = New System.Drawing.Point(0, 27)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(896, 364)
+        Me.Panel1.TabIndex = 1
+        '
+        'SumarToolStripMenuItem
+        '
+        Me.SumarToolStripMenuItem.Name = "SumarToolStripMenuItem"
+        Me.SumarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SumarToolStripMenuItem.Text = "Sumar"
+        '
+        'MultiplicarToolStripMenuItem
+        '
+        Me.MultiplicarToolStripMenuItem.Name = "MultiplicarToolStripMenuItem"
+        Me.MultiplicarToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.MultiplicarToolStripMenuItem.Text = "Multiplicar Matrices"
+        '
+        'MultiplicarPorEscalarToolStripMenuItem
+        '
+        Me.MultiplicarPorEscalarToolStripMenuItem.Name = "MultiplicarPorEscalarToolStripMenuItem"
+        Me.MultiplicarPorEscalarToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.MultiplicarPorEscalarToolStripMenuItem.Text = "Multiplicar por Escalar"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(896, 390)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Panel1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As Button
+
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ModoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculadoraCientificaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculadoraVectorialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculadoraDeMatricesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents SumarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MultiplicarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MultiplicarPorEscalarToolStripMenuItem As ToolStripMenuItem
 End Class
